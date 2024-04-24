@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, Text, View } from 'react-native'
+import { Alert, FlatList, View } from 'react-native'
 import Users from '../data/Users'
 import { ListItem, Avatar, Icon } from '@rneui/themed';
 import { Button } from '@rneui/themed';
@@ -8,7 +8,17 @@ import { Button } from '@rneui/themed';
 export default props =>{
 
     function confirmUserDeletion(User) {
-
+        Alert.alert('Excluir Usuário', 'Deseja exluir o usuário?', [
+            {
+                text: 'SIM',
+                onPress() {
+                    console.warn('Delete', + User.id)
+                }
+            },
+            {
+                text: 'NÃO'
+            }
+        ])
     }
 
     function getUserItem(  { item: Users }  ) {
@@ -31,7 +41,7 @@ export default props =>{
                 icon={<Icon name='edit' size={25} color='orange'/>}
                 />
                 <Button 
-                onPress={() => props.navigation.navigate('UserForm', Users)}
+                onPress={() => confirmUserDeletion(Users)}
                 type="clear"
                 icon={<Icon name='delete' size={25} color='red'/>}
                 />
