@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import UserList from './views/UserList';
 import UserForm from './views/UserForm';
 import { Button, Icon } from '@rneui/themed';
+import  { UserProvider } from './context/UsersContext';
 
 
 
@@ -11,6 +12,8 @@ const Stack = createNativeStackNavigator()
 
 export default function CrudReact() {
   return (
+    <UserProvider>
+
       <NavigationContainer>
 
         <Stack.Navigator
@@ -46,6 +49,7 @@ export default function CrudReact() {
 
         </Stack.Navigator>
       </NavigationContainer>
+    </UserProvider>
   );
 }
 
