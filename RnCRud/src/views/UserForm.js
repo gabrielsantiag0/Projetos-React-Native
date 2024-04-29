@@ -1,9 +1,15 @@
 import { Input } from '@rneui/themed'
 import React, { useState } from 'react'
 import { View, Text, StyleSheet, Button } from 'react-native'
+import { UserContext } from '../context/UsersContext'
+
+
+const {dispatch}  = UserContext(UserContext)
 
 export default ( { route, navigation  } ) =>{
-   const [User, setUser] = useState( route.params ? route.params : {} )
+    const [User, setUser] = useState( route.params ? route.params : {} )
+
+    
     return(
         <View style={style.form}>
             <Text>Name</Text>
@@ -30,6 +36,10 @@ export default ( { route, navigation  } ) =>{
         <Button 
         title='Salvar'
         onPress={() => {
+            dispatch({
+                type:  User.id ? 'updateUser' : 'createUser',
+                payload: User,
+            })
             navigation.goBack()
         }}
         />
