@@ -7,22 +7,28 @@ import Users from '../data/Users'
 
  const actions = {
     createUser( state, action ) {
-        const user = action.payload
-        user.id = Math.random()
+        const User = action.payload
+        User.id = Math.random()
         return{
             ...state,
-            Users: [...state.Users, user],
+            Users: [...state.Users, User],
         }
     },
-
     deleteUsers(state, action) {
         const user = action.payload 
         return{
             ...state,
             Users: state.Users.filter(u => u.id !== user.id)
         }
-    }
+    },
+    updateUser( state, action ) {
+        const updateUser = action.payload
+        return{
+            ...state,
+            Users: state.Users.Map(u => u.id === updated.id ? updated : u )
+        }
  }
+}
     
   export  const UserProvider = props =>{
 
