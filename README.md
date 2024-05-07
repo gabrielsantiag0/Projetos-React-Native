@@ -1,1 +1,1 @@
-user and icon rendering, finished. now rendering user image, using React Native Elements, more specific (ListItem), more and more searches
+REACT NATIVE projects, I created this repository to keep my learning projects in, where I use them to study the language React Native, all the projects are for learning, did you like any of them? follow me
