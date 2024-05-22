@@ -9,7 +9,7 @@ export default function App() {
         className="flex-1 items-center justify-center"
         >
             <Text
-            className="text-3xl"
+            className="text-3xl font-pblack"
             >Agora !</Text>
             <StatusBar style="auto"/>
             <Link href='/profile' style={{  color: 'blue'  }}>Go To Profile</Link>
