@@ -10,7 +10,7 @@ const SingIn = () => {
     >
      <ScrollView>
       <View
-      className=" w-full justify-center min-h-[85vh] px-4 my-6"
+      className=" w-full justify-center h-full px-4 my-6"
       >
         <Image 
           className="w-[115px] h-[35px]"
@@ -18,7 +18,7 @@ const SingIn = () => {
           resizeMode='contain'
         />
         <Text
-        className="text-2xl text-white text-semibold "
+        className="text-2xl text-white text-semibold mt-10 font-psemibold"
         >
           Log in to Aora
           </Text>
