@@ -27,7 +27,7 @@ const SingIn = () => {
     >
      <ScrollView>
       <View
-                                      //min-h-[85vh] \\
+                                      //once completed add the commented code ( min-h-[85vh] ) \\
       className=" w-full justify-center h-full px-4 my-6"
       >
         <Image 
